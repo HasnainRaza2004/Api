@@ -1,16 +1,3 @@
-// import React from 'react'
-// // import Dashboard from './Components/Dashboard'
-
-// const App = () => {
-//   return (
-//     <div>
-//       {/* <Dashboard /> */}
-      
-//     </div>
-//   )
-// }
-
-// export default App
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -27,13 +14,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link , Route , Routes ,BrowserRouter } from 'react-router-dom';
-
-import Photos from './Components/Photos'
-import Users from './Components/Users'
-import Albums from './Components/Albums'
-import Posts from './Components/Posts'
-import Comments from './Components/Comments'
-import Todos from './Components/Todos'
+import Photos from './Photos'
+import Users from './Users'
+import Todos from './Todos'
+import Comments from './Comments'
+import Albums from './Albums'
+import Posts from './Posts'
 
 
 
@@ -94,7 +80,7 @@ Api Rendering
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}>
         <Toolbar />
         <Routes>
-             <Route exact path='/' element={<Dashboard />}></Route>
+             <Route end={true} path='/' element={<Dashboard />}></Route>
             <Route path="/Photos" element={<Photos />}></Route> 
             <Route path="/Albums" element={<Albums />}></Route>
             <Route path="/Todos" element={<Todos />}></Route>
@@ -108,4 +94,3 @@ Api Rendering
     </Box>
   );
 }
-
